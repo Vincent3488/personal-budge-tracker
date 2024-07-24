@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="background">
+    <h1>Budget Tracker</h1>
+    <main>
+        <header>
+            <div>
+                <h5>Total Balance</h5>
+                <span id="balance">$0.00</span>
+            </div>
+            <div>
+                <h5>Income</h5>
+                <span id="income">$0.00</span>
+            </div>
+            <div>
+                <h5>Expense</h5>
+                <span id="expense">$0.00</span>
+            </div>
+        </header>
+        <section>
+            <h3>Transactions</h3>
+            <ul id="transactionList"></ul>
+            <div id="status"></div>
+        </section>
+        <section>
+            <h3>Add Transaction</h3>
+            <form id="transactionForm">
+                <div>
+                    <label for="type">
+                        <input type="checkbox" name="type" id="type" />
+                        <div class="option">
+                            <span>Expense</span>
+                            <span>Income</span>
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required />
+                </div>
+                <div>
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" value="0" min="0.01" step="0.01" required />
+                </div>
+                <div>
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date" required />
+                </div>
+                <div>
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" rows="3" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="editSection" style="display: none;">
+            <h3>Edit Transaction</h3>
+            <form id="editTransactionForm">
+                <div>
+                    <label for="editType">
+                        <input type="checkbox" name="editType" id="editType" />
+                        <div class="option">
+                            <span>Expense</span>
+                            <span>Income</span>
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <label for="editName">Name</label>
+                    <input type="text" name="editName" id="editName" required />
+                </div>
+                <div>
+                    <label for="editAmount">Amount</label>
+                    <input type="number" name="editAmount" id="editAmount" value="0" min="0.01" step="0.01" required />
+                </div>
+                <div>
+                    <label for="editDate">Date</label>
+                    <input type="date" name="editDate" id="editDate" required />
+                </div>
+                <div>
+                    <label for="editDescription">Description</label>
+                    <textarea name="editDescription" id="editDescription" rows="3" required></textarea>
+                </div>
+                <button type="submit">Save</button>
+                <button type="button" onclick="hideEditSection()">Cancel</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+          <div class="footer-item">
+            <p><strong>Contact Information:</strong></p>
+          </div>
+          <div class="footer-item">
+            <p>Address: 00100, Nairobi</p>
+          </div>
+          <div class="footer-item">
+            <p>Mobile: (+254) 792823182</p>
+          </div>
+          <div class="footer-item">
+            <p>Email: <a href="mailto:owuorvincent43@gmail.com">owuorvincent43<br>@gmail.com</a></p>
+          </div>
+          <div class="footer-item">
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/vincent-agunda-/">Vincent Agunda</a></p>
+          </div>
+          <div class="footer-item">
+            <p>GitHub: <a href="https://github.com/Vincent3488">Vincent3488</a></p>
+          </div>
+        </div>
+      </footer>
+      
+      
+      
+    <script src="app.js"></script>
+</body>
+</html>
