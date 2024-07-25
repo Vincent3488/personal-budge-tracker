@@ -2,7 +2,7 @@
 
 :root {
   --bg-color: #f6f8fa;
-  --text-color: #1d1f27;
+  --text-color: black;
   --main-color: #8e2828;
 }
 
@@ -26,6 +26,7 @@ body {
 }
 
 .background {
+  background-image: url('image/IMG_4493.JPG');
   background-size: cover; /* Ensures the image covers the entire element */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -247,8 +248,8 @@ ul li .action svg {
 }
 
 footer {
-  background-color: black; /* Light grey background */
-  color: white; /* Dark text color */
+  background-color: black; /* Dark background for footer */
+  color: white; /* Light text color */
   text-align: center;
   padding: 10px 0; /* Reduced padding for a thinner footer */
   position: relative;
