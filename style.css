@@ -246,54 +246,26 @@ ul li .action svg {
   display: none;
 }
 
-/* Footer styles */
 footer {
-    background-color: #040404;
-    padding: 2rem;
-    border-top: 1px solid #ddd;
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line if necessary */
-    max-width: 1200px; /* Sets a max width for better responsiveness */
-    width: 100%;
-    gap: 2rem; /* Adds space between items */
-  }
-  
-  .footer-item {
-    flex: 0.5;
-    min-width: 150px; /* Ensures items have a minimum width */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Aligns text to the top within each item */
-    background-color: #ffffff; /* Background color for the sandbox effect */
-    padding: 1rem; /* Adds padding inside the sandbox */
-    border-radius: 5px; /* Rounds the corners of each sandbox */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    box-sizing: border-box; /* Ensures padding and border are included in the width */
-  }
-  
-  footer p {
-    font-size: 0.875rem;
-    color: #0c0c0c;
-    margin: 0;
-  }
-  
-  footer a {
-    color: rgb(86, 79, 123);
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  
-  
+  background-color: black; /* Light grey background */
+  color: white; /* Dark text color */
+  text-align: center;
+  padding: 10px 0; /* Reduced padding for a thinner footer */
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-content p {
+  margin: 5px 0; /* Slight margin to separate the lines */
+  font-size: 14px; /* Smaller font size for a thinner appearance */
+}
+
+.footer-content a {
+  color: var(--main-color); /* Link color for email and GitHub */
+  text-decoration: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   body {

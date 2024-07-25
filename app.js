@@ -54,9 +54,12 @@ function addTransactionToDOM(transaction) {
     <div class="amount ${transaction.type}">
       ${transaction.type === 'income' ? '+' : '-'}$${Math.abs(transaction.amount)}
     </div>
-    <div class="action" onclick="removeTransaction(${transaction.id})">
-      <svg viewBox="0 0 24 24">
+    <div class="action">
+      <svg onclick="removeTransaction(${transaction.id})" viewBox="0 0 24 24">
         <path fill="currentColor" d="M19,13H5V11H19V13Z" />
+      </svg>
+      <svg onclick="showEditSection(${transaction.id})" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C16.42,4 20,7.58 20,12C20,16.42 16.42,20 12,20M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M11,14H13V16H11V14M11,7H13V12H11V7Z" />
       </svg>
     </div>
   `;
@@ -101,10 +104,12 @@ document.getElementById('transactionForm').addEventListener('submit', addTransac
 init();
 
 // Function to show edit section
-function showEditSection(transaction) {
-  const editSection = document.getElementById('editSection');
-  editSection.style.display = 'block';
+function showEditSection(id) {
+  const transaction = transactions.find(t => t.id === id);
 
+  if (!transaction) return;
+
+  document.getElementById('editSection').style.display = 'block';
   document.querySelector('input[name="editName"]').value = transaction.name;
   document.querySelector('input[name="editAmount"]').value = transaction.amount;
   document.querySelector('input[name="editDate"]').value = transaction.date;
@@ -113,7 +118,7 @@ function showEditSection(transaction) {
 
   document.getElementById('editTransactionForm').onsubmit = function(e) {
     e.preventDefault();
-    saveTransaction(transaction.id);
+    saveTransaction(id);
   };
 }
 
