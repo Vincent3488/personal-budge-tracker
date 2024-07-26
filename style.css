@@ -255,6 +255,7 @@ footer {
   position: relative;
   width: 100%;
   bottom: 0;
+  border-radius: 15px; 
 }
 
 .footer-content p {
