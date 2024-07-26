@@ -51,7 +51,7 @@ main {
   background-color: #fff;
   padding: 1rem;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 header {
@@ -59,7 +59,7 @@ header {
   color: #fff;
   padding: 1rem;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -98,7 +98,7 @@ form button {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 5px;
   height: 42px;
   font-family: "Poppins", sans-serif;
@@ -139,7 +139,7 @@ input#type {
   justify-content: center;
   padding: 10px;
   background: #eee;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
 }
 
@@ -148,7 +148,7 @@ input#type {
   width: 45%;
   height: 100%;
   background: var(--main-color);
-  border-radius: 5px;
+  border-radius: 10px;
   position: absolute;
   left: 2.5%;
   transition: all 0.3s ease;
@@ -179,7 +179,7 @@ textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 5px;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
